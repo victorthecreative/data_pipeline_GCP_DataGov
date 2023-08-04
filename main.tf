@@ -1,4 +1,4 @@
 resource "google_storage_bucket" "gcs_bucket"{
-    name = "teste-bucket-random-35400000457436783130"
+    name = "teste-bucket-random-35132102032"
     location = var.region
 }
