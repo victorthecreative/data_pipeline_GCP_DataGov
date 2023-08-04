@@ -27,7 +27,6 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
 
-    # Set up Cloud SDK and authenticate with Google Cloud
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@master
       with:
@@ -41,7 +40,6 @@ jobs:
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
 
-    # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -lock=false
       env:
@@ -53,4 +51,4 @@ jobs:
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
       run: terraform apply -auto-approve
       env:
-        GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
+        GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }} 
