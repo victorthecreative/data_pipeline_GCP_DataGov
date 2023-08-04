@@ -28,11 +28,12 @@ jobs:
       uses: hashicorp/setup-terraform@v1
 
     - name: Set up Cloud SDK
-      uses: google-github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@v0
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: datapipeline-datagov
         export_default_credentials: true
+
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
