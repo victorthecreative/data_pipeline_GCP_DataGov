@@ -1,8 +1,3 @@
-resource "google_storage_bucket" "gcs_bucket"{
-    name = "teste-bucket-random-30509002032"
-    location = var.region
-}
-
 module "bigquery-dataset-gasolina" {
   source  = "./modules/bigquery"
   dataset_id                  = "gasolina_brasil"
