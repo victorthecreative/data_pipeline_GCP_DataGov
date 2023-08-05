@@ -2,7 +2,7 @@
   {
     "description": "",
     "mode": "NULLABLE",
-    "name": "regiao_sigla",
+    "name": "sigla_regiao",
     "type": "STRING"
   },
   {
